@@ -10,6 +10,20 @@ exports.flowControlAnswers = {
     //
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
-
+    var result = "";
+    if (Number.isInteger(num)) {
+        if (num % 3 === 0) {
+            result += "fizz";
+        }
+        if (num % 5 === 0) {
+            result  += "buzz";
+        }
+        if (result === "") {
+            result = num;
+        }
+    } else {
+        result = false;
+    }
+    return result;
   }
 };
