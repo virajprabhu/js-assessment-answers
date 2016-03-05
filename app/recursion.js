@@ -15,7 +15,7 @@ exports.recursionAnswers = {
   	for (var i = 0; i<=len; i++) {
   		// console.log(len);
   		curr_perms.splice(i, 0, curr);
-  		console.log(curr_perms);
+  		// console.log(curr_perms);
   	}
   	return curr_perms;
   },

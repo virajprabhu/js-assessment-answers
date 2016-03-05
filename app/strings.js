@@ -17,7 +17,18 @@ exports.stringsAnswers = {
 
   },
   wordWrap: function(str, cols) {
-
+    var count = 0;
+    str += ' ';
+    for (var i = 0; i<str.length-1; i++) {
+      count += 1;
+      if (str[i] === ' ') {
+        if (str.substring(i+1).indexOf(' ') + count > cols) {
+          count = 0;
+          str = str.substring(0, i) + '\n' + str.substring(i+1);
+        } 
+      }
+    }
+    return str.substring(0, str.length-1);
   },
   reverseString: function(str) {
   	return str.split('').reverse().join('');
